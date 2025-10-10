@@ -1,0 +1,28 @@
+...this.resources[index]	=> copy existing properties
+...dto	                    => copy new properties (overwriting same keys)
+{ ...old, ...new }	        => create a new merged object
+=	                        => reassign to update the array immutably
+
+
+... is The spread operator
+
+
+
+
+
+
+Assignment 4=>
+
+Express(nest js)
+Tasks controller
+Swagger
+Save data to object
+coding guidlines
+dto/ object should have at least 5 properties
+
+-Get All - get all task 
+-Get specific task - get task details
+-Insert - add task details
+-Update - Update task details
+-Delete - Delete specific task
+

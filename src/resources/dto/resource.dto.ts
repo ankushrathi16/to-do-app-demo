@@ -16,3 +16,10 @@ export class UpdateResourceDto {
   @IsString()
   description?: string;
 }
+
+export class FilterResourceDto {
+  status?: string;
+  type?: string;
+  limit?: number;
+  page?: number;
+}
