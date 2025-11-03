@@ -26,3 +26,36 @@ dto/ object should have at least 5 properties
 -Update - Update task details
 -Delete - Delete specific task
 
+
+
+
+
+
+
+
+
+
+
+
+
+Tables
+
+columns - datatype - fixed str
+
+
+Student name - string - varchar(50) -PK
+Student email - varchart(50)
+Student MobileNO - number - int
+
+
+Tables
+studentid 
+Address
+
+
+
+
+Database -
+
+    Collection => Table
+    Document => Rows
