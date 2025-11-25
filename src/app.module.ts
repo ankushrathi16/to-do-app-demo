@@ -10,7 +10,7 @@ import { UsersModule } from './users/users.module';
     MongooseModule.forRoot(
       'mongodb+srv://ankushrathi726_db_user:lZWS60NpbXkh3n7C@cluster0.uwhwxeo.mongodb.net/nest_demo?retryWrites=true&w=majority',
       {
-        dbName: 'nest_demo1',
+        dbName: 'nest_demo',
       },
     ),
     ResourcesModule,
