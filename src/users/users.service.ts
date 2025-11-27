@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model, Types } from 'mongoose';
+import { Model } from 'mongoose';
 import { CreateUserDto } from 'src/dto/user.dto';
 import { User } from 'src/schema/user.schema';
 
@@ -18,14 +19,14 @@ export class UsersService {
   }
 
   // 🟢 Basic findAll with aggregation example (match by ID)
-  async findAll(): Promise<User[]> {
-    const db = this.userModel.db.useDb('nest_demo1');
+  async findAll(age: any): Promise<User[]> {
+    const db = this.userModel.db.useDb('nest_demo');
     const result = await db
       .collection('users')
       .aggregate([
         {
           $match: {
-            _id: new Types.ObjectId('68f9a5810cbbe062ee8a372e'),
+            age: { $gte: +age },
           },
         },
       ])

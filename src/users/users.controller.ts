@@ -19,20 +19,21 @@ export class UsersController {
   // 🟢 Create a new user
   @Post()
   async create(@Body() data: CreateUserDto): Promise<User> {
+    console.log('Creating user with data:', data);
     return this.usersService.create(data);
   }
 
   // 🟢 Get all users (currently has aggregation match example)
-  @Get()
-  async findAll(): Promise<User[]> {
-    return this.usersService.findAll();
+  @Get(':age')
+  async findAll(@Param('age') age: string): Promise<User[]> {
+    return this.usersService.findAll(age);
   }
 
-  // 🟠 Get user by ID
-  @Get(':id')
-  async findOne(@Param('id') id: string): Promise<User> {
-    return this.usersService.findOne(id);
-  }
+  // // 🟠 Get user by ID
+  // @Get(':id')
+  // async findOne(@Param('id') id: string): Promise<User> {
+  //   return this.usersService.findOne(id);
+  // }
 
   // 🟣 Update user by ID
   @Patch(':id')
