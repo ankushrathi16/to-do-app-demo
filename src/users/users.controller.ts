@@ -4,9 +4,9 @@ import {
   Post,
   Body,
   Param,
-  Patch,
   Delete,
   Query,
+  Put,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { User } from '../schema/user.schema';
@@ -36,7 +36,7 @@ export class UsersController {
   // }
 
   // 🟣 Update user by ID
-  @Patch(':id')
+  @Put(':id')
   async update(
     @Param('id') id: string,
     @Body() data: Partial<User>,
